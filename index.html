@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Checker</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Speed typing</h1>
+        <div class="stats">
+          <p>Timer: <span id="timer">0s</span></p>
+          <p>Mistakes: <span id="mistakes">0</span></p>
+        </div>
+      </div>
+
+      <div id="quote" onmousedown="return false" onselect="return false"></div>
+      <textarea
+        rows="3"
+        id="quote-input"
+        placeholder="Type here when test starts"
+      ></textarea>
+      <button id="start-test" onclick="startTest()">Start test</button>
+      <button id="stop-test" onclick="displayResult()">Stop test</button>
+      <div class="result">
+        <h3>Result</h3>
+      
+        <div class="wrapper">
+          <p>Accuracy: <span id="accuracy"></span></p>
+          <p>Speed: <span id="speed"></span></p>
+          <p class="reset-btn" onclick="reset()"><span  class="material-symbols-outlined">
+            refresh
+            </span></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
